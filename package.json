@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
   "scripts": {
     "start": "node protomahananta.html"
   }
   
 }
+=======
+{
+  "scripts": {
+    "start": "node protomahananta.html"
+  }
+}
+>>>>>>> 63f5c731a4b0bb2949a5930f87ae7dd24e898a03
