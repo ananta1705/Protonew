@@ -12,6 +12,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('nav a.nav-link');
+    const sectionIds = Array.from(navLinks).map(link => link.getAttribute('href').substring(1));
+    const sections = sectionIds.map(id => document.getElementById(id));
+
+    const syncNavOnScroll = () => {
+        let currentSectionIndex = sections.length - 1;
+        while (currentSectionIndex >= 0 && window.scrollY + 150 < sections[currentSectionIndex].offsetTop) {
+            currentSectionIndex--;
+        }
+        navLinks.forEach((link, index) => {
+            if (index === currentSectionIndex) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    };
+
+    syncNavOnScroll();
+    window.addEventListener('scroll', syncNavOnScroll);
+});
+</script>
 
     <!-- Custom CSS & Animations -->
     <style>

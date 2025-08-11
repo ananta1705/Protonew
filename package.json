@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 {
+  "name": "protonew",
+  "version": "1.0.0",
   "scripts": {
-    "start": "node protomahananta.html"
-  }
-  
-}
-=======
-{
-  "scripts": {
-    "start": "node protomahananta.html"
+    "start": "serve public"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
   }
 }
->>>>>>> 63f5c731a4b0bb2949a5930f87ae7dd24e898a03
